@@ -476,39 +476,52 @@ const canisteData = [
 ];
 
 function buildCanisteGrid() {
-    const grid = document.getElementById('caniste-grid');
+    var grid = document.getElementById('caniste-grid');
     if (!grid) return;
 
-    // Render in reverse chronological order
-    const reversed = [...canisteData].reverse();
-    
-    reversed.forEach(yearData => {
-        const block = document.createElement('div');
+    // Ordre antéchronologique (le plus récent en premier)
+    var reversed = canisteData.slice().reverse();
+
+    reversed.forEach(function(yearData) {
+        var block = document.createElement('div');
         block.className = 'caniste-year-block';
-        
-        const header = document.createElement('div');
+
+        var header = document.createElement('div');
         header.className = 'caniste-year-header';
-        header.innerHTML = `
-            <span class="caniste-year-label">${yearData.year}</span>
-            <span class="caniste-year-count">${yearData.issues.length} numéro${yearData.issues.length > 1 ? 's' : ''}</span>
-        `;
-        
-        const issuesDiv = document.createElement('div');
+        header.innerHTML =
+            '<span class="caniste-year-label">' + yearData.year + '</span>' +
+            '<span class="caniste-year-meta">' +
+                '<span class="caniste-year-count">' + yearData.issues.length + ' n°</span>' +
+                '<i class="fas fa-chevron-down caniste-toggle-icon"></i>' +
+            '</span>';
+
+        var issuesDiv = document.createElement('div');
         issuesDiv.className = 'caniste-issues';
-        
-        yearData.issues.forEach(issue => {
-            const link = document.createElement('a');
-            link.href = `https://drive.google.com/uc?id=${issue.id}`;
+
+        yearData.issues.forEach(function(issue) {
+            var link = document.createElement('a');
+            link.href = 'https://drive.google.com/uc?id=' + issue.id;
             link.target = '_blank';
             link.className = 'caniste-issue-link';
-            link.textContent = `N° ${issue.num}`;
+            link.textContent = 'N°\u00a0' + issue.num;
             issuesDiv.appendChild(link);
         });
-        
+
+        // Toggle accordéon au clic sur le header
+        header.addEventListener('click', function() {
+            block.classList.toggle('open');
+        });
+
         block.appendChild(header);
         block.appendChild(issuesDiv);
         grid.appendChild(block);
     });
+
+    // Ouvrir automatiquement les 2 années les plus récentes
+    var blocks = grid.querySelectorAll('.caniste-year-block');
+    for (var i = 0; i < Math.min(2, blocks.length); i++) {
+        blocks[i].classList.add('open');
+    }
 }
 
 // Build caniste grid on DOM ready
