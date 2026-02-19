@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAN Sarreguemines - Courez Avec Nous</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/Logo CAN.png" alt="Logo CAN">
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#accueil" class="nav-link active">Accueil</a>
+                <a href="#evenements" class="nav-link">Événements</a>
+                <a href="#resultats" class="nav-link">Résultats</a>
+                <div class="nav-dropdown">
+                    <a href="#nos-courses" class="nav-link nav-dropdown-trigger">Nos Courses <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#10km" class="dropdown-item">Les 10 km de Sarreguemines</a>
+                        <a href="#sarregueminoises" class="dropdown-item">Les Sarregueminoises contre le Cancer</a>
+                    </div>
+                </div>
+                <a href="#caniste" class="nav-link">Le Caniste</a>
+                <div class="nav-dropdown">
+                    <a href="#archives" class="nav-link nav-dropdown-trigger">Archives <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu dropdown-menu-scroll">
+                        <a href="http://www.courezavecnous.com/2024.html" target="_blank" class="dropdown-item">2024</a>
+                        <a href="http://www.courezavecnous.com/2023.html" target="_blank" class="dropdown-item">2023</a>
+                        <a href="http://www.courezavecnous.com/2022.html" target="_blank" class="dropdown-item">2022</a>
+                        <a href="http://www.courezavecnous.com/2021.html" target="_blank" class="dropdown-item">2021</a>
+                        <a href="http://www.courezavecnous.com/2020.html" target="_blank" class="dropdown-item">2020</a>
+                        <a href="http://www.courezavecnous.com/2019.html" target="_blank" class="dropdown-item">2019</a>
+                        <a href="http://www.courezavecnous.com/2018.html" target="_blank" class="dropdown-item">2018</a>
+                        <a href="http://www.courezavecnous.com/2017.html" target="_blank" class="dropdown-item">2017</a>
+                        <a href="http://www.courezavecnous.com/2016.html" target="_blank" class="dropdown-item">2016</a>
+                        <a href="http://www.courezavecnous.com/2015.html" target="_blank" class="dropdown-item">2015</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#medias" class="nav-link nav-dropdown-trigger">Médias <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="https://www.flickr.com/photos/127451228@N05/collections/" target="_blank" class="dropdown-item"><i class="fas fa-camera"></i> Photos (Flickr)</a>
+                        <a href="https://www.youtube.com/channel/UCToA7cgLOyE8D9TNn8tlWJQ" target="_blank" class="dropdown-item"><i class="fab fa-youtube"></i> Vidéos (YouTube)</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#liens" class="nav-link nav-dropdown-trigger">Liens <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#liens-utiles" class="dropdown-item">Liens Utiles</a>
+                        <a href="http://www.courezavecnous.com/NOS%20PARTENAIRES.html" target="_blank" class="dropdown-item">Partenaires</a>
+                    </div>
+                </div>
+                <a href="#club" class="nav-link">Le Club</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://forms.registration4all.com/EventRegistration/Register_Sport_Event.aspx?EventID=220456" target="_blank" class="nav-btn">Adhérer</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+
+        <!-- Carrousel de photos -->
+        <div class="hero-slides" id="heroSlides">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=1920&q=85&auto=format&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1920&q=85&auto=format&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1920&q=85&auto=format&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?w=1920&q=85&auto=format&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1920&q=85&auto=format&fit=crop')"></div>
+        </div>
+
+        <!-- Overlay dégradé -->
+        <div class="hero-overlay"></div>
+
+        <!-- Contenu -->
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-map-marker-alt"></i> Sarreguemines, Moselle
+            </div>
+            <h1 class="hero-title">CAN Sarreguemines<br>
+                <span class="hero-title-accent">Courez Avec Nous</span>
+            </h1>
+            <p class="hero-subtitle">Club de course à pied passionné depuis 1979</p>
+            <p class="hero-description">Débutant ou confirmé, trails ou routes — rejoignez plus de 150 coureurs qui partagent le même élan chaque semaine.</p>
+            <div class="hero-buttons">
+                <a href="https://forms.registration4all.com/EventRegistration/Register_Sport_Event.aspx?EventID=220456" target="_blank" class="btn btn-hero-primary">
+                    <i class="fas fa-running"></i> S'inscrire aux 10 km
+                </a>
+                <a href="#club" class="btn btn-hero-secondary">
+                    <i class="fas fa-users"></i> Découvrir le Club
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">150</span>
+                    <span class="stat-label">Membres</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">30</span>
+                    <span class="stat-label">Courses / An</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">Ans d'histoire</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contrôles carrousel -->
+        <button class="hero-nav hero-prev" id="heroPrev" aria-label="Photo précédente">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-nav hero-next" id="heroNext" aria-label="Photo suivante">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Indicateurs dots -->
+        <div class="hero-dots" id="heroDots">
+            <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+            <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+            <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dernières Nouvelles</h2>
+                <a href="#" class="view-all">Voir tout <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800" alt="Assemblée Générale">
+                        <span class="news-badge">Important</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> 16 Janvier 2026</span>
+                            <span><i class="far fa-clock"></i> 19h30</span>
+                        </div>
+                        <h3>Assemblée Générale du Club</h3>
+                        <p>Venez participer à notre assemblée générale à la maison de quartier de Beausoleil. Programme : bilan 2025, projets 2026, et convivialité.</p>
+                        <a href="#" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=600" alt="Silvesterlauf">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> 28 Décembre 2025</span>
+                        </div>
+                        <h3>Silvesterlauf de Sarrebruck</h3>
+                        <p>Belle participation de nos coureurs à la Silvesterlauf. Consultez les résultats complets.</p>
+                        <a href="#" class="read-more">Voir résultats <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600" alt="Foulées de Noël">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> 7 Décembre 2025</span>
+                        </div>
+                        <h3>Foulées de Noël - Stiring-Wendel</h3>
+                        <p>Excellentes performances de nos athlètes lors des foulées de Noël!</p>
+                        <a href="https://fmacfreymingmerlebach.com/wp-content/uploads/2025/11/classement-la-ronde-des-belvederes-2025.pdf" class="read-more">Voir résultats <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section events-section" id="evenements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Prochains Événements</h2>
+                <div class="event-filters">
+                    <button class="filter-btn active">Tous</button>
+                    <button class="filter-btn">Courses</button>
+                    <button class="filter-btn">Trails</button>
+                    <button class="filter-btn">Entraînements</button>
+                </div>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">15</span>
+                        <span class="event-month">FÉV</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category trail">Trail</span>
+                        <h3>Trail des Comtes de Créhange</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Créhange</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-route"></i> 12 km</span>
+                            <span><i class="fas fa-users"></i> 15 inscrits</span>
+                        </div>
+                        <a href="#" class="event-link">S'inscrire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">08</span>
+                        <span class="event-month">MAR</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category course">Course</span>
+                        <h3>Semi-Marathon de Forbach</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Forbach</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-route"></i> 21 km</span>
+                            <span><i class="fas fa-users"></i> 8 inscrits</span>
+                        </div>
+                        <a href="#" class="event-link">S'inscrire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">22</span>
+                        <span class="event-month">MAR</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category entrainement">Entraînement</span>
+                        <h3>Sortie Longue Collective</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Sarreguemines</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 09h00</span>
+                            <span><i class="fas fa-route"></i> 15-20 km</span>
+                        </div>
+                        <a href="#" class="event-link">Participer <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar-cta">
+                <i class="fas fa-calendar-alt"></i>
+                <p>Consultez le calendrier complet des événements 2026</p>
+                <a href="#" class="btn btn-outline">Voir le calendrier</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section results-section" id="resultats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Résultats Récents</h2>
+                <a href="#" class="view-all">Tous les résultats <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="results-container">
+                <div class="result-card">
+                    <div class="result-header">
+                        <h3>Les Foulées de Noël - Stiring-Wendel</h3>
+                        <span class="result-date">7 Décembre 2025</span>
+                    </div>
+                    <div class="result-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>3 podiums</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span>12 participants</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-route"></i>
+                            <span>8.4 km</span>
+                        </div>
+                    </div>
+                    <div class="top-runners">
+                        <div class="runner-item">
+                            <span class="position gold">1er</span>
+                            <span class="runner-name">Jean Dupont</span>
+                            <span class="runner-time">32:45</span>
+                        </div>
+                        <div class="runner-item">
+                            <span class="position silver">3e</span>
+                            <span class="runner-name">Marie Laurent</span>
+                            <span class="runner-time">36:12</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-sm">Classement complet</a>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-header">
+                        <h3>La Dieblingeoise - Diebling</h3>
+                        <span class="result-date">9 Novembre 2025</span>
+                    </div>
+                    <div class="result-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>2 podiums</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span>10 participants</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-route"></i>
+                            <span>10 km</span>
+                        </div>
+                    </div>
+                    <div class="top-runners">
+                        <div class="runner-item">
+                            <span class="position silver">2e</span>
+                            <span class="runner-name">Pierre Martin</span>
+                            <span class="runner-time">38:23</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-sm">Classement complet</a>
+                </div>
+            </div>
+            
+            <!-- Challenge Board -->
+            <div class="challenge-board">
+                <h3><i class="fas fa-medal"></i> Challenge CAN 2026</h3>
+                <div class="challenge-table">
+                    <div class="challenge-row header">
+                        <span>Position</span>
+                        <span>Coureur</span>
+                        <span>Points</span>
+                        <span>Courses</span>
+                    </div>
+                    <div class="challenge-row">
+                        <span class="rank">1</span>
+                        <span class="name">Jean Dupont</span>
+                        <span class="points">245</span>
+                        <span class="races">8</span>
+                    </div>
+                    <div class="challenge-row">
+                        <span class="rank">2</span>
+                        <span class="name">Marie Laurent</span>
+                        <span class="points">238</span>
+                        <span class="races">9</span>
+                    </div>
+                    <div class="challenge-row">
+                        <span class="rank">3</span>
+                        <span class="name">Pierre Martin</span>
+                        <span class="points">221</span>
+                        <span class="races">7</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline">Classement complet du challenge</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="galerie">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Galerie Photos</h2>
+                <a href="https://www.flickr.com/photos/127451228@N05/collections/" target="_blank" class="view-all">Toutes les photos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/freyming.jpg" onerror="this.src='https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=600'" alt="Ronde des Belvédères">
+                    <div class="gallery-overlay">
+                        <h4>Ronde des Belvédères - Freyming</h4>
+                        <a href="https://fmacfreymingmerlebach.com/wp-content/uploads/2025/11/classement-la-ronde-des-belvederes-2025.pdf" target="_blank" class="gallery-link">Classement</a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/walscheid.jpg" onerror="this.src='https://images.unsplash.com/photo-1526676037777-05a232554f77?w=600'" alt="Trail de Walscheid">
+                    <div class="gallery-overlay">
+                        <h4>Trail de Walscheid 2025</h4>
+                        <a href="https://lastlap.fr/event-live?nameEvent=Trail%20de%20Walscheid" target="_blank" class="gallery-link">Classement</a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/spitrail.jpg" onerror="this.src='https://images.unsplash.com/photo-1526676037777-05a232554f77?w=600'" alt="Spit'Trail">
+                    <div class="gallery-overlay">
+                        <h4>Spit'Trail - L'Hôpital</h4>
+                        <a href="https://gotiming.fr/resultats/spittrail-2025" target="_blank" class="gallery-link">Classement</a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/verriers.png" onerror="this.src='https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600'" alt="Trail des Verriers">
+                    <div class="gallery-overlay">
+                        <h4>Trail des Verriers - Goetzenbruck</h4>
+                        <a href="https://www.le-sportif.com/ResultsDetail/ResultsHistory.aspx?EventResultsID=5738" target="_blank" class="gallery-link">Classement</a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/crehange.jpg" onerror="this.src='https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?w=600'" alt="Trail des Comtes">
+                    <div class="gallery-overlay">
+                        <h4>Trail des Comtes de Créhange</h4>
+                        <a href="https://gotiming.fr/evenement/trail-des-comtes-de-crehange/" target="_blank" class="gallery-link">Classement</a>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/epiphanie.jpg" onerror="this.src='https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600'" alt="Épiphanie">
+                    <div class="gallery-overlay">
+                        <h4>Sortie Épiphanie 2025</h4>
+                        <span>Sortie groupée</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Courses Section -->
+    <section class="section courses-section" id="nos-courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Courses</h2>
+                <p class="section-subtitle">Le CAN Sarreguemines organise deux événements majeurs chaque année</p>
+            </div>
+            <div class="courses-grid">
+
+                <!-- 10 KM -->
+                <div class="course-card" id="10km">
+                    <div class="course-header course-header-blue">
+                        <div class="course-icon"><i class="fas fa-running"></i></div>
+                        <h3>Les 10 km de Sarreguemines</h3>
+                        <p class="course-edition">Prochaine édition — Octobre 2026</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div><strong>Départ</strong><span>10h00, Avenue de la Blies</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-road"></i>
+                                <div><strong>Parcours</strong><span>Urbain asphalté, mesuré IAAF — ravitaillement km 5</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div><strong>Accueil / Douches</strong><span>Gymnase du Lycée Kieffer, rue Rauski</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-ticket-alt"></i>
+                                <div><strong>Inscription</strong><span>14€ — Ouverture 01/09/2025 — Clôture 18/10/25 à 12h. Pas d'inscription le jour même.</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-user-check"></i>
+                                <div><strong>Conditions</strong><span>16 ans min. (né(e) en 2009 ou avant). Licences FFA uniquement. PPS &lt; 3 mois obligatoire.</span></div>
+                            </div>
+                        </div>
+                        <div class="course-rewards">
+                            <h4><i class="fas fa-trophy"></i> Récompenses</h4>
+                            <p>Primes de 200€ à 30€ pour les 10 premiers H/F. Prime de 100€ au 1er H/F au point intermédiaire (café Chez Alex). Coupes catégories CA/JU/ES/SE et Masters. Tee-shirt technique aux 1800 premiers inscrits, médaille à tous les arrivants.</p>
+                        </div>
+                        <div class="course-actions">
+                            <a href="https://forms.registration4all.com/EventRegistration/Register_Sport_Event.aspx?EventID=220456" target="_blank" class="btn btn-primary">S'inscrire en ligne</a>
+                            <a href="https://www.le-sportif.com/ResultsDetail/ResultsHistoryDetail.aspx?EventResultsID=519&EventResultsActivityID=58827&EventResultsActivityRND=bd2e08cb-94dd-46e6-b113-b3ed484a82d2" target="_blank" class="btn btn-outline">Classement 2025</a>
+                            <a href="https://media.le-sportif.com/Videos/Video_Sport_EventActivityList.aspx?EventID=220456" target="_blank" class="btn btn-outline">Vidéos d'arrivée</a>
+                        </div>
+                        <div class="course-palmares">
+                            <h4><i class="fas fa-medal"></i> Palmarès récent</h4>
+                            <div class="palmares-table">
+                                <div class="palmares-row header"><span class="p-year">Année</span><span class="p-winner-h">1er Homme</span><span class="p-winner-f">1ère Femme</span></div>
+                                <div class="palmares-row"><span class="p-year">2025</span><span class="p-winner-h">Laurent Tsang-Chun-Sze <em>30'52''</em></span><span class="p-winner-f">Aurélie Brevetti <em>39'22''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2024</span><span class="p-winner-h">Yann Schrub <em>29'37''</em></span><span class="p-winner-f">Caroline Dennilauler <em>34'52''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2023</span><span class="p-winner-h">Fidelio Klein <em>29'55''</em></span><span class="p-winner-f">Emilie Jacquot Claude <em>35'10''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2022</span><span class="p-winner-h">Yann Schrub <em>29'50''</em></span><span class="p-winner-f">Florence Scher <em>36'24''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2021</span><span class="p-winner-h">Yann Schrub <em>29'12''</em></span><span class="p-winner-f">Emilie Jacquot Claude <em>34'57''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2019</span><span class="p-winner-h">Yann Schrub <em>28'57''</em></span><span class="p-winner-f">Chloé Reitz <em>35'19''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2018</span><span class="p-winner-h">Yann Schrub <em>30'15''</em></span><span class="p-winner-f">Chloé Reitz <em>35'35''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2017</span><span class="p-winner-h">Yann Schrub <em>31'11''</em></span><span class="p-winner-f">Chloé Reitz <em>35'53''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2016</span><span class="p-winner-h">Yann Schrub <em>30'32''</em></span><span class="p-winner-f">Nathalie Da Ponte <em>36'42''</em></span></div>
+                                <div class="palmares-row"><span class="p-year">2015</span><span class="p-winner-h">Karim Tahri <em>31'08''</em></span><span class="p-winner-f">Nathalie Da Ponte <em>36'21''</em></span></div>
+                            </div>
+                            <details class="palmares-more">
+                                <summary>Tout le palmarès (depuis 1980)</summary>
+                                <div class="palmares-table">
+                                    <div class="palmares-row"><span class="p-year">2014</span><span class="p-winner-h">Gregory Basilico <em>31'56''</em></span><span class="p-winner-f">Nathalie Da Ponte <em>35'57''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2013</span><span class="p-winner-h">Omar Errachidi <em>31'10''</em></span><span class="p-winner-f">Nathalie Da Ponte <em>36'41''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2012</span><span class="p-winner-h">Omar Errachidi <em>31'51''</em></span><span class="p-winner-f">Daisy Colibry <em>36'20''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2011</span><span class="p-winner-h">Remi Mayer <em>31'30''</em></span><span class="p-winner-f">Daisy Colibry <em>36'12''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2010</span><span class="p-winner-h">Kamel Abdi <em>32'35''</em></span><span class="p-winner-f">Daisy Colibry <em>37'10''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2009</span><span class="p-winner-h">Alexei Gurkin <em>30'07''</em></span><span class="p-winner-f">Ludmilla Gurkina <em>34'54''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2008</span><span class="p-winner-h">Alexei Gurkin <em>29'57''</em></span><span class="p-winner-f">Ludmilla Gurkina <em>34'46''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2007</span><span class="p-winner-h">Alexei Gurkin <em>31'32''</em></span><span class="p-winner-f">Ludmilla Gurkina <em>38'19''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2006</span><span class="p-winner-h">Alexei Gurkin <em>30'10''</em></span><span class="p-winner-f">Ludmilla Gurkina <em>36'23''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2005</span><span class="p-winner-h">Alexei Gurkin <em>30'00''</em></span><span class="p-winner-f">Valentina Enaki <em>35'02''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2004</span><span class="p-winner-h">Omar Errachidi <em>31'03''</em></span><span class="p-winner-f">Angelika Averkova <em>35'28''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2003</span><span class="p-winner-h">Moussa Kipkemboi <em>30'25''</em></span><span class="p-winner-f">Victoria Nenacheva <em>36'39''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2002</span><span class="p-winner-h">Moussa Kipkemboi <em>29'16''</em></span><span class="p-winner-f">Freshiah Walthaka <em>34'55''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2001</span><span class="p-winner-h">Michael Ngaseke <em>28'50''</em></span><span class="p-winner-f">Elisabeth Onyambu <em>35'32''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">2000</span><span class="p-winner-h">Hamid Mezziani <em>30'44''</em></span><span class="p-winner-f">Elena Baranova <em>35'29''</em></span></div>
+                                    <div class="palmares-row"><span class="p-year">1999</span><span class="p-winner-h">Hamid Mezziani <em>31'17''</em></span><span class="p-winner-f">Annick Singer <em>37'39''</em></span></div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sarregueminoises -->
+                <div class="course-card" id="sarregueminoises">
+                    <div class="course-header course-header-pink">
+                        <div class="course-icon"><i class="fas fa-ribbon"></i></div>
+                        <h3>Les Sarregueminoises contre le Cancer</h3>
+                        <p class="course-edition">Dimanche 08 juin 2025 — 10h00</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-banner-pink">
+                            <i class="fas fa-heart"></i>
+                            <span>Intégralité des bénéfices reversés à la Ligue contre le Cancer (Comité de la Moselle)</span>
+                        </div>
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div><strong>Départ</strong><span>Esplanade du Casino des Faïenceries, 10h00</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-road"></i>
+                                <div><strong>Parcours</strong><span>Urbain + chemin de halage — course, marche ou nordic walking — sans chrono ni classement</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-ticket-alt"></i>
+                                <div><strong>Inscription</strong><span>12€ — En ligne sur HelloAsso à partir du 01/05/2025</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-users"></i>
+                                <div><strong>Conditions</strong><span>100% féminine (hommes déguisés en femmes bienvenus !). 16 ans min. Pas de certificat médical requis.</span></div>
+                            </div>
+                            <div class="course-info-item">
+                                <i class="fas fa-tshirt"></i>
+                                <div><strong>Tee-shirt</strong><span>Offert aux 1000 premières inscrites. Réutilisez vos anciens t-shirts : moins de textile, plus de solidarité !</span></div>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="https://www.helloasso.com/associations/courez-avec-nous/evenements/5km-contre-le-cancer-2025" target="_blank" class="btn btn-pink">S'inscrire sur HelloAsso</a>
+                        </div>
+                        <div class="course-palmares">
+                            <h4><i class="fas fa-images"></i> Albums photos des éditions précédentes</h4>
+                            <div class="albums-grid">
+                                <a href="https://www.app.sportpxl.com/photographs/varoqui-photo/albums/2441?ak=2e64f37035d34ca2bc30b1ba2ba70994c1a9d81b" target="_blank" class="album-link">📸 2025</a>
+                                <a href="https://flic.kr/s/aHBqjBuyt8" target="_blank" class="album-link">📸 2024</a>
+                                <a href="https://flic.kr/s/aHBqjAGANH" target="_blank" class="album-link">📸 2023</a>
+                                <a href="https://flic.kr/s/aHBqjzT4J4" target="_blank" class="album-link">📸 2022</a>
+                                <a href="https://flic.kr/s/aHsmDXXsJm" target="_blank" class="album-link">📸 2019</a>
+                                <a href="https://www.flickr.com/gp/127451228@N05/P31bb4" target="_blank" class="album-link">📸 2018</a>
+                                <a href="https://flic.kr/s/aHskWo81kj" target="_blank" class="album-link">📸 2017</a>
+                                <a href="https://flic.kr/s/aHskBADzVN" target="_blank" class="album-link">📸 2016</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Le Caniste Section -->
+    <section class="section caniste-section" id="caniste">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-newspaper"></i> Bulletin "Le Caniste"</h2>
+                <p class="section-subtitle">Archive complète du bulletin interne depuis 1979 — plus de 140 numéros en téléchargement</p>
+            </div>
+            <div class="caniste-intro">
+                <i class="fas fa-archive"></i>
+                <p>Le Caniste est le bulletin d'information du CAN Sarreguemines. Tous les numéros depuis le pré-numéro de 1979 sont archivés et disponibles via Google Drive.</p>
+            </div>
+            <div class="caniste-grid" id="caniste-grid">
+                <!-- Généré dynamiquement par script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Archives Section -->
+    <section class="section archives-section" id="archives">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-history"></i> Archives</h2>
+                <p class="section-subtitle">Retrouvez tous les résultats, photos et comptes-rendus par année</p>
+            </div>
+            <div class="archives-grid">
+                <a href="http://www.courezavecnous.com/2024.html" target="_blank" class="archive-card"><span class="archive-year">2024</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2023.html" target="_blank" class="archive-card"><span class="archive-year">2023</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2022.html" target="_blank" class="archive-card"><span class="archive-year">2022</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2021.html" target="_blank" class="archive-card"><span class="archive-year">2021</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2020.html" target="_blank" class="archive-card"><span class="archive-year">2020</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2019.html" target="_blank" class="archive-card"><span class="archive-year">2019</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2018.html" target="_blank" class="archive-card"><span class="archive-year">2018</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2017.html" target="_blank" class="archive-card"><span class="archive-year">2017</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2016.html" target="_blank" class="archive-card"><span class="archive-year">2016</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2015.html" target="_blank" class="archive-card"><span class="archive-year">2015</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2014.html" target="_blank" class="archive-card"><span class="archive-year">2014</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2013.html" target="_blank" class="archive-card"><span class="archive-year">2013</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2012.html" target="_blank" class="archive-card"><span class="archive-year">2012</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2011.html" target="_blank" class="archive-card"><span class="archive-year">2011</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2010.html" target="_blank" class="archive-card"><span class="archive-year">2010</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2009.html" target="_blank" class="archive-card"><span class="archive-year">2009</span><i class="fas fa-external-link-alt"></i></a>
+                <a href="http://www.courezavecnous.com/2008.html" target="_blank" class="archive-card"><span class="archive-year">2008</span><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medias Section -->
+    <section class="section medias-section" id="medias">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-photo-video"></i> Médias</h2>
+                <p class="section-subtitle">Photos et vidéos de toutes nos courses et événements</p>
+            </div>
+            <div class="medias-grid">
+                <a href="https://www.flickr.com/photos/127451228@N05/collections/" target="_blank" class="media-card">
+                    <div class="media-card-icon media-icon-flickr"><i class="fab fa-flickr"></i></div>
+                    <div class="media-card-content">
+                        <h3>Photos sur Flickr</h3>
+                        <p>Collection complète de photos de toutes nos courses, entraînements et événements depuis plusieurs années.</p>
+                        <span class="media-link">Voir la galerie <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/channel/UCToA7cgLOyE8D9TNn8tlWJQ" target="_blank" class="media-card">
+                    <div class="media-card-icon media-icon-youtube"><i class="fab fa-youtube"></i></div>
+                    <div class="media-card-content">
+                        <h3>Vidéos sur YouTube</h3>
+                        <p>Replays des arrivées des 10 km, reportages sur les Sarregueminoises et autres moments forts du club.</p>
+                        <span class="media-link">Voir la chaîne <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liens Section -->
+    <section class="section liens-section" id="liens">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="liens-utiles"><i class="fas fa-link"></i> Liens Utiles</h2>
+                <p class="section-subtitle">Clubs, fédérations et organisateurs partenaires de notre région</p>
+            </div>
+            <div class="liens-grid">
+                <a href="http://eichelthal.sportsregions.fr/" target="_blank" class="lien-card"><i class="fas fa-running"></i><span>Club Eichelthal</span></a>
+                <a href="http://www.courirenmoselle.fr" target="_blank" class="lien-card"><i class="fas fa-map"></i><span>Courir en Moselle</span></a>
+                <a href="http://www.jogloisirs.com" target="_blank" class="lien-card"><i class="fas fa-calendar-alt"></i><span>Jog Loisirs</span></a>
+                <a href="http://sarregueminestri.free.fr/" target="_blank" class="lien-card"><i class="fas fa-swimming-pool"></i><span>Sarreguemines Tri</span></a>
+                <a href="http://sarrunningclub.sportsregions.fr" target="_blank" class="lien-card"><i class="fas fa-shoe-prints"></i><span>Sar Running Club</span></a>
+                <a href="https://www.silvesterlauf-sb.de/" target="_blank" class="lien-card"><i class="fas fa-star"></i><span>Silvesterlauf Sarrebruck</span></a>
+                <a href="https://www.facebook.com/freerunners.herbitzheim" target="_blank" class="lien-card"><i class="fas fa-running"></i><span>Free Runners Herbitzheim</span></a>
+                <a href="http://www.vfa-neunkirchen.de" target="_blank" class="lien-card"><i class="fas fa-flag"></i><span>VfA Neunkirchen (DE)</span></a>
+                <a href="http://www.marathon-alsace.com" target="_blank" class="lien-card"><i class="fas fa-route"></i><span>Marathon Alsace</span></a>
+                <a href="http://www.fouleesducristal.fr" target="_blank" class="lien-card"><i class="fas fa-gem"></i><span>Foulées du Cristal</span></a>
+                <a href="http://fmacfreymingmerlebach.com" target="_blank" class="lien-card"><i class="fas fa-running"></i><span>FMAC Freyming-Merlebach</span></a>
+                <a href="http://assa.athle.com" target="_blank" class="lien-card"><i class="fas fa-medal"></i><span>ASSA Sarreguemines</span></a>
+                <a href="http://www.trisport-sarreguemines.com" target="_blank" class="lien-card"><i class="fas fa-biking"></i><span>Trisport Sarreguemines</span></a>
+                <a href="http://www.arun.fr" target="_blank" class="lien-card"><i class="fas fa-running"></i><span>ARUN</span></a>
+                <a href="http://www.performance67.com" target="_blank" class="lien-card"><i class="fas fa-stopwatch"></i><span>Performance 67</span></a>
+                <a href="http://f4p.fr/" target="_blank" class="lien-card"><i class="fas fa-door-open"></i><span>Foulées des 4 Portes</span></a>
+                <a href="http://www.courseducoeur-sas.com" target="_blank" class="lien-card"><i class="fas fa-heart"></i><span>Course du Cœur</span></a>
+                <a href="http://www.fouleesdenoel.com/" target="_blank" class="lien-card"><i class="fas fa-snowflake"></i><span>Foulées de Noël</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="club">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>À Propos du Club</h2>
+                    <p class="lead">Le CAN Sarreguemines (Courez Avec Nous) est un club dynamique et convivial basé à Sarreguemines.</p>
+                    <p>Depuis notre création, nous rassemblons des coureurs de tous niveaux partageant la même passion pour la course à pied. Que vous soyez débutant ou coureur confirmé, vous trouverez votre place parmi nous.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-running"></i>
+                            <h4>Entraînements Réguliers</h4>
+                            <p>Séances encadrées plusieurs fois par semaine</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h4>Communauté Active</h4>
+                            <p>Plus de 150 membres passionnés</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-medal"></i>
+                            <h4>Participations Collectives</h4>
+                            <p>30+ courses et trails par an</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Nous rejoindre</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800" alt="Team CAN">
+                    <div class="image-badge">
+                        <i class="fas fa-heart"></i>
+                        <span>Passion & Convivialité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Feed Section -->
+    <section class="section social-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Suivez-nous sur les Réseaux</h2>
+            </div>
+            <div class="social-grid">
+                <div class="social-card facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <h3>Facebook</h3>
+                    <p>Rejoignez notre communauté</p>
+                    <a href="https://www.facebook.com/people/CAN-Sarreguemines/100083086042865" target="_blank" class="btn btn-sm">Suivre</a>
+                </div>
+                <div class="social-card instagram">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>Photos et stories</p>
+                    <a href="#" class="btn btn-sm">Suivre</a>
+                </div>
+                <div class="social-card strava">
+                    <i class="fab fa-strava"></i>
+                    <h3>Strava</h3>
+                    <p>Suivez nos performances</p>
+                    <a href="#" class="btn btn-sm">Rejoindre</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à Courir Avec Nous ?</h2>
+                <p>Rejoignez le CAN Sarreguemines et découvrez le plaisir de courir ensemble</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-lg">Adhérer Maintenant</a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">Nous Contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>CAN Sarreguemines</h3>
+                    <p>Club d'Athlétisme de Sarreguemines - Courez Avec Nous</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/CAN-Sarreguemines/100083086042865" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-strava"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#evenements">Événements</a></li>
+                        <li><a href="#resultats">Résultats</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#club">Le Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informations</h4>
+                    <ul>
+                        <li><a href="#">Adhésion</a></li>
+                        <li><a href="#">Entraînements</a></li>
+                        <li><a href="#">Challenge 2026</a></li>
+                        <li><a href="#">Partenaires</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Sarreguemines, France</li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="14777b7a6075776054777b6166716e756271777a7b61673a777b79">[email&#160;protected]</a></li>
+                        <li><i class="fas fa-globe"></i> www.courezavecnous.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CAN Sarreguemines. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</
