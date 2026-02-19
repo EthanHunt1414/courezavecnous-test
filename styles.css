@@ -1704,6 +1704,64 @@ ul {
     color: white;
     border-color: var(--primary-color);
 }
+/* ==================== BACKYARD MYTHIQUE ==================== */
+
+.course-card.backyard-special {
+    border: 2px solid #1b5e3b;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card.backyard-special:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Header forêt profond */
+.course-header-green {
+    background: linear-gradient(135deg, #0f3d2e, #1b5e3b);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet subtil lumineux */
+.course-header-green::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.05)
+    );
+    transform: skewX(-25deg);
+    animation: forestGlow 6s infinite linear;
+}
+
+@keyframes forestGlow {
+    0% { transform: translateX(-100%) skewX(-25deg); }
+    100% { transform: translateX(100%) skewX(-25deg); }
+}
+
+/* Bouton spécial */
+.btn-green {
+    background: #2e8b57;
+    color: white;
+    border: 2px solid #2e8b57;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-green:hover {
+    background: #1b5e3b;
+    border-color: #1b5e3b;
+}
 
 /* ==================== LE CANISTE ==================== */
 .caniste-section { background: var(--dark); color: white; }
