@@ -1,52 +1,79 @@
 // ==================== HERO CAROUSEL ====================
-(function() {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots   = document.querySelectorAll('.hero-dot');
-    const prev   = document.getElementById('heroPrev');
-    const next   = document.getElementById('heroNext');
-    let current  = 0;
-    let timer;
+document.addEventListener('DOMContentLoaded', function() {
+    var slides  = document.querySelectorAll('.hero-slide');
+    var dots    = document.querySelectorAll('.hero-dot');
+    var btnPrev = document.getElementById('heroPrev');
+    var btnNext = document.getElementById('heroNext');
+
+    if (!slides.length) return;
+
+    var current = 0;
+    var total   = slides.length;
+    var timer   = null;
 
     function goTo(idx) {
         slides[current].classList.remove('active');
         dots[current].classList.remove('active');
-        current = (idx + slides.length) % slides.length;
+        current = ((idx % total) + total) % total;
         slides[current].classList.add('active');
         dots[current].classList.add('active');
     }
 
-    function autoPlay() {
-        timer = setInterval(() => goTo(current + 1), 5500);
+    function startAuto() {
+        stopAuto();
+        timer = setInterval(function() { goTo(current + 1); }, 5500);
     }
 
-    function resetTimer() {
-        clearInterval(timer);
-        autoPlay();
+    function stopAuto() {
+        if (timer) { clearInterval(timer); timer = null; }
     }
 
-    if (slides.length) {
-        autoPlay();
+    // Initialisation : s'assurer que slide 0 est active
+    for (var i = 0; i < total; i++) {
+        slides[i].classList.remove('active');
+        dots[i].classList.remove('active');
+    }
+    slides[0].classList.add('active');
+    dots[0].classList.add('active');
 
-        next && next.addEventListener('click', () => { goTo(current + 1); resetTimer(); });
-        prev && prev.addEventListener('click', () => { goTo(current - 1); resetTimer(); });
+    startAuto();
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                goTo(parseInt(dot.dataset.slide));
-                resetTimer();
-            });
+    if (btnNext) {
+        btnNext.addEventListener('click', function() {
+            goTo(current + 1);
+            startAuto();
         });
+    }
+    if (btnPrev) {
+        btnPrev.addEventListener('click', function() {
+            goTo(current - 1);
+            startAuto();
+        });
+    }
 
-        // Swipe tactile
-        let startX = 0;
-        const heroEl = document.querySelector('.hero');
-        heroEl.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-        heroEl.addEventListener('touchend', e => {
-            const diff = startX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 50) { goTo(diff > 0 ? current + 1 : current - 1); resetTimer(); }
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            goTo(parseInt(this.getAttribute('data-slide'), 10));
+            startAuto();
+        });
+    });
+
+    // Swipe tactile
+    var startX = 0;
+    var heroEl = document.querySelector('.hero');
+    if (heroEl) {
+        heroEl.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+        heroEl.addEventListener('touchend', function(e) {
+            var diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                goTo(diff > 0 ? current + 1 : current - 1);
+                startAuto();
+            }
         }, { passive: true });
     }
-})();
+});
 
 // ==================== NAVIGATION ==================== 
 const hamburger = document.getElementById('hamburger');
