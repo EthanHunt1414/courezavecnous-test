@@ -1527,8 +1527,9 @@ ul {
 }
 
 @media (max-width: 900px) {
-    .courses-grid { grid-template-columns: 1fr; }
+    .courses-grid  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
 .course-card {
     background: var(--white);
     border-radius: 16px;
