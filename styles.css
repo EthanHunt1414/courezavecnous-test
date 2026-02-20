@@ -152,16 +152,24 @@ ul {
 .nav-social-yt:hover     { background: #cc0000; }
 
 @media (max-width: 768px) {
-    .nav-social { display: -webkit-box; }
+    .nav-social { display: none; }
     .nav-logo {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        gap: 6px;
+    }
+   .nav-logo {
+        font-size: 0.95rem;
         gap: 6px;
     }
     .nav-logo i {
-        font-size: 2rem;
+        font-size: 0.95rem;
+    }
+    .nav-logo img {
+        height: 26px;
+        width: auto;
     }
     .nav-container {
-        padding: 8px 14px;
+        padding: 6px 12px;
     }
 }
 .nav-link {
