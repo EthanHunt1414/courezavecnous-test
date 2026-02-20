@@ -152,13 +152,13 @@ ul {
 .nav-social-yt:hover     { background: #cc0000; }
 
 @media (max-width: 768px) {
-    .nav-social { display: none; }
+    .nav-social { display: -webkit-box; }
     .nav-logo {
         font-size: 1rem;
         gap: 6px;
     }
     .nav-logo i {
-        font-size: 1rem;
+        font-size: 2rem;
     }
     .nav-container {
         padding: 8px 14px;
@@ -297,7 +297,7 @@ ul {
 
 .hero-title {
     font-family: var(--font-primary);
-    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    font-size: clamp(2.2rem, 5.5vw, 4.7rem);
     font-weight: 800;
     line-height: 1.0;
     margin-bottom: 14px;
