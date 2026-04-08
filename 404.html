@@ -3,24 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page introuvable – CAN Sarreguemines</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>404 – Page non trouvée | CAN Sarreguemines</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f8fafc; color: #111827; }
-    .wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
-    .card { max-width: 680px; width: 100%; background: #fff; border-radius: 18px; padding: 36px; box-shadow: 0 12px 30px rgba(0,0,0,.08); text-align: center; }
-    .card img { max-width: 160px; margin-bottom: 20px; }
-    .btn404 { display: inline-block; margin-top: 20px; padding: 12px 18px; border-radius: 10px; background: #d10000; color: #fff; text-decoration: none; font-weight: 700; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #1d4ed8; --orange: #f97316; --dark: #0f172a;
+      --gray: #64748b; --light: #f8fafc; --white: #ffffff;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; position: relative;
+    }
+
+    /* Animated background */
+    .bg-runner {
+      position: fixed; inset: 0; z-index: 0;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #4c1d95 100%);
+    }
+    .bg-runner::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Floating particles */
+    .particle {
+      position: fixed; border-radius: 50%;
+      background: rgba(255,255,255,.08); animation: float linear infinite;
+      pointer-events: none; z-index: 1;
+    }
+    @keyframes float {
+      from { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      to   { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+    }
+
+    /* Main content */
+    .page-404 {
+      position: relative; z-index: 10;
+      text-align: center; color: var(--white);
+      padding: 40px 24px; max-width: 700px; width: 100%;
+      animation: fadeUp .8s ease;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo-wrap { margin-bottom: 32px; }
+    .logo-wrap img { height: 80px; width: auto; margin: 0 auto; }
+
+    .number-404 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(6rem, 20vw, 12rem);
+      font-weight: 900; line-height: 1;
+      background: linear-gradient(135deg, #3b82f6, #f97316, #8b5cf6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative; display: inline-block;
+      filter: drop-shadow(0 0 60px rgba(99,102,241,.5));
+    }
+
+    .runner-icon {
+      font-size: 4rem; margin: 8px 0 16px;
+      animation: runnerBounce 1s ease infinite alternate;
+    }
+    @keyframes runnerBounce {
+      from { transform: translateY(0) rotate(-5deg); }
+      to   { transform: translateY(-10px) rotate(5deg); }
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 800; margin-bottom: 12px;
+    }
+    p.sub {
+      font-size: 1.05rem; opacity: .75; margin-bottom: 40px; line-height: 1.6;
+      max-width: 480px; margin-left: auto; margin-right: auto;
+    }
+
+    /* Track/road decoration */
+    .track {
+      width: 100%; height: 8px;
+      background: repeating-linear-gradient(90deg, var(--orange) 0, var(--orange) 40px, transparent 40px, transparent 60px);
+      border-radius: 4px; margin: 32px 0;
+      animation: trackScroll 2s linear infinite;
+      background-size: 60px 8px;
+    }
+    @keyframes trackScroll {
+      from { background-position: 0 0; }
+      to   { background-position: 60px 0; }
+    }
+
+    /* Suggestions */
+    .suggestions {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: center; margin-bottom: 40px;
+    }
+    .sugg-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 50px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: .9rem;
+      cursor: pointer; transition: all .3s ease; text-decoration: none;
+    }
+    .sugg-btn--primary { background: var(--orange); color: var(--white); }
+    .sugg-btn--primary:hover { background: #ea580c; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,115,22,.4); }
+    .sugg-btn--outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,.3); }
+    .sugg-btn--outline:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); transform: translateY(-2px); }
+
+    /* Quick links */
+    .quick-links {
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+      font-size: .85rem; opacity: .6;
+    }
+    .quick-links a { color: var(--white); text-decoration: underline; }
+    .quick-links a:hover { opacity: 1; color: #93c5fd; }
+    .quick-links span { opacity: .5; }
+
+    /* Social */
+    .social-404 { display: flex; gap: 12px; justify-content: center; margin-top: 32px; }
+    .social-404 a {
+      width: 42px; height: 42px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 1rem; transition: all .3s;
+    }
+    .social-404 a:hover { transform: translateY(-3px); border-color: var(--orange); color: var(--orange); }
+
+    /* Footer */
+    .page-footer { margin-top: 40px; font-size: .78rem; opacity: .4; }
+
+    @media (max-width: 480px) {
+      .suggestions { flex-direction: column; align-items: center; }
+      .sugg-btn { width: 100%; max-width: 300px; justify-content: center; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <img src="images/Logo CAN.png" alt="CAN Sarreguemines">
-      <h1>Oups, cette page n’existe pas</h1>
-      <p>La page demandée est introuvable ou a été déplacée.</p>
-      <a class="btn404" href="/">Retour à l’accueil</a>
-    </div>
+
+<!-- Animated background -->
+<div class="bg-runner"></div>
+
+<!-- Floating particles (generated by JS) -->
+<script>
+  for (let i = 0; i < 15; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 40 + 10;
+    p.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      animation-duration:${Math.random()*15+10}s;
+      animation-delay:${Math.random()*10}s;
+    `;
+    document.body.appendChild(p);
+  }
+</script>
+
+<!-- Main 404 content -->
+<div class="page-404">
+
+  <div class="logo-wrap">
+    <img src="images/Logo CAN.png" alt="CAN Sarreguemines" onerror="this.style.display='none'">
   </div>
+
+  <div class="number-404">404</div>
+
+  <div class="runner-icon">🏃</div>
+
+  <h1>Oops ! Cette page a pris la fuite…</h1>
+  <p class="sub">
+    La page que vous cherchez n'existe pas ou a été déplacée.<br>
+    Peut-être a-t-elle fait une sortie longue sans prévenir&nbsp;!
+  </p>
+
+  <div class="track"></div>
+
+  <div class="suggestions">
+    <a href="index.html" class="sugg-btn sugg-btn--primary">
+      <i class="fas fa-home"></i> Retour à l'accueil
+    </a>
+    <a href="index.html#evenements" class="sugg-btn sugg-btn--outline">
+      <i class="fas fa-calendar"></i> Prochains événements
+    </a>
+    <a href="index.html#resultats" class="sugg-btn sugg-btn--outline">
+      <i class="fas fa-trophy"></i> Résultats
+    </a>
+    <a href="mailto:can.sarreguemines@gmail.com" class="sugg-btn sugg-btn--outline">
+      <i class="fas fa-envelope"></i> Contact
+    </a>
+  </div>
+
+  <div class="quick-links">
+    <a href="index.html#club">Le Club</a>
+    <span>·</span>
+    <a href="index.html#nos-courses">Nos Courses</a>
+    <span>·</span>
+    <a href="index.html#archives">Archives</a>
+    <span>·</span>
+    <a href="index.html#medias">Médias</a>
+    <span>·</span>
+    <a href="index.html#liens-utiles">Liens</a>
+  </div>
+
+  <div class="social-404">
+    <a href="https://www.facebook.com/people/CAN-Sarreguemines/100083086042865" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/cansarreguemines/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.flickr.com/photos/127451228@N05/collections/" target="_blank" aria-label="Flickr"><i class="fab fa-flickr"></i></a>
+    <a href="https://www.youtube.com/channel/UCToA7cgLOyE8D9TNn8tlWJQ" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <div class="page-footer">
+    &copy; 2026 CAN Sarreguemines — Courez Avec Nous
+  </div>
+
+</div>
+
+<script>
+  // Countdown auto-redirect after 30 seconds
+  let seconds = 30;
+  const subEl = document.querySelector('p.sub');
+  const countdownEl = document.createElement('p');
+  countdownEl.style.cssText = 'font-size:.82rem;opacity:.5;margin-top:8px;';
+  subEl.after(countdownEl);
+
+  const countdown = setInterval(() => {
+    seconds--;
+    countdownEl.textContent = `Redirection automatique dans ${seconds}s…`;
+    if (seconds <= 0) {
+      clearInterval(countdown);
+      window.location.href = 'index.html';
+    }
+  }, 1000);
+</script>
 </body>
 </html>

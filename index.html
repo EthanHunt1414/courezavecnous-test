@@ -5,16 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAN Sarreguemines – Courez Avec Nous</title>
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="CAN Sarreguemines – Club de course à pied à Sarreguemines : entraînements, événements, résultats, trail, route et vie du club.">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#d10000">
-  <link rel="canonical" href="https://www.courezavecnous.com/">
-  <link rel="icon" type="image/png" href="images/favicon-can.png">
-  <meta property="og:title" content="CAN Sarreguemines – Courez Avec Nous">
-  <meta property="og:description" content="Le club de course à pied de Sarreguemines : événements, résultats, trail, route et vie du club.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.courezavecnous.com/">
-  <meta property="og:image" content="https://www.courezavecnous.com/images/Logo%20CAN.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -38,7 +28,8 @@
     </a>
     <div class="nav-menu" id="nav-menu">
       <a href="#accueil"      class="nav-link">Accueil</a>
-      <a href="#evenements"   class="nav-link">Événements</a>
+      <a href="#evenements" class="nav-link">Événements</a>
+      <a href="#calendrier" class="nav-link">Calendrier</a>
       <a href="#resultats"    class="nav-link">Résultats</a>
       <div class="nav-dropdown">
         <span class="nav-link nav-link--drop">Nos Courses <i class="fas fa-chevron-down"></i></span>
@@ -79,7 +70,7 @@
       </div>
       <a href="#club" class="nav-link">Le Club</a>
       <a href="#contact" class="nav-link">Contact</a>
-      <a href="https://forms.registration4all.com/EventRegistration/Register_Sport_Event.aspx?EventID=220456" target="_blank" class="nav-btn">Adhérer</a>
+      <button class="nav-btn" onclick="openModal()">Adhérer</button>
     </div>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
@@ -105,7 +96,7 @@
     <div class="hero-btns">
       <a href="#club" class="btn btn-primary"><i class="fas fa-users"></i> Découvrir le Club</a>
       <a href="#evenements" class="btn btn-outline-white"><i class="fas fa-calendar"></i> Prochains Événements</a>
-      <a href="https://forms.registration4all.com/EventRegistration/Register_Sport_Event.aspx?EventID=220456" target="_blank" class="btn btn-secondary"><i class="fas fa-running"></i> S'inscrire aux 10 km</a>
+      <a href="http://www.courezavecnous.com/LES%2010KM.html" target="_blank" class="btn btn-secondary"><i class="fas fa-running"></i> S'inscrire aux 10 km</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><span class="hstat-n" data-target="150">0</span><span class="hstat-l">Membres</span></div>
@@ -287,6 +278,48 @@
 <!-- ====================================================
      RÉSULTATS
 ===================================================== -->
+<!-- ====================================================
+     CALENDRIER DES COURSES 2026
+===================================================== -->
+<section class="section calendar-section" id="calendrier">
+  <div class="container">
+    <div class="section-header">
+      <div><span class="section-tag">Planning annuel</span><h2 class="section-title">Calendrier des Courses 2026</h2></div>
+      <a href="http://www.courirenmoselle.fr" target="_blank" class="view-all">Courir en Moselle <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="cal-legend">
+      <span class="cal-dot cal-dot--trail"></span>Trail &nbsp;
+      <span class="cal-dot cal-dot--route"></span>Route &nbsp;
+      <span class="cal-dot cal-dot--challenge"></span>Challenge CAN &nbsp;
+      <span class="cal-dot cal-dot--orga"></span>Organisé par CAN
+    </div>
+    <div class="calendar-table-wrap">
+      <table class="calendar-table">
+        <thead><tr><th>Date</th><th>Course</th><th>Lieu</th><th>Dist.</th><th>Type</th><th>Résultats</th></tr></thead>
+        <tbody>
+          <tr><td><span class="cal-date">09 Fév.</span></td><td>Trail des Comtes de Créhange</td><td>Créhange</td><td>12 km</td><td><span class="cal-tag cal-trail">Trail</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://gotiming.fr/evenement/trail-des-comtes-de-crehange/" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">13 Avr.</span></td><td>Walditrail de Neufgrange</td><td>Neufgrange</td><td>Variable</td><td><span class="cal-tag cal-trail">Trail</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://www.sporkrono.fr" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">06 Avr.</span></td><td>Trails de Niederbronn</td><td>Niederbronn-les-B.</td><td>Variable</td><td><span class="cal-tag cal-trail">Trail</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://livetrail.net" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">03 Mai</span></td><td>Trail des Verriers</td><td>Goetzenbruck</td><td>Variable</td><td><span class="cal-tag cal-trail">Trail</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://www.le-sportif.com" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">31 Mai</span></td><td>Grand 8 de la Cobach</td><td>Bliesbruck</td><td>8 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td>—</td></tr>
+          <tr class="orga-row"><td><span class="cal-date">08 Juin</span></td><td><strong>Les Sarregueminoises contre le Cancer ⭐</strong></td><td>Sarreguemines</td><td>Libre</td><td><span class="cal-tag cal-orga">Orga CAN</span></td><td><a href="https://www.helloasso.com" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">07 Juin</span></td><td>Spit'Trail – L'Hôpital</td><td>L'Hôpital</td><td>Variable</td><td><span class="cal-tag cal-trail">Trail</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://gotiming.fr/resultats/spittrail-2025" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">14 Juin</span></td><td>Trails de Walscheid</td><td>Walscheid</td><td>Variable</td><td><span class="cal-tag cal-trail">Trail</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://lastlap.fr" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">24 Août</span></td><td>Course des Mollets – Hilsprich</td><td>Hilsprich</td><td>10 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://www.le-sportif.com" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">07 Sep.</span></td><td>Foulées du Cristal – St-Louis-lès-Bitche</td><td>St-Louis-lès-Bitche</td><td>10 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://fouleesducristal.fr" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">28 Sep.</span></td><td>Foulées des 4 Portes – Rosheim</td><td>Rosheim</td><td>Variable</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://chronocompetition.wiclax-results.com" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr class="orga-row"><td><span class="cal-date">19 Oct.</span></td><td><strong>10 km de Sarreguemines ⭐</strong></td><td>Sarreguemines</td><td>10 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-orga">Orga CAN</span></td><td><a href="http://www.courezavecnous.com/LES%2010KM.html" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">09 Nov.</span></td><td>La Dieblingeoise</td><td>Diebling</td><td>10 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://gotiming.fr/resultats/dieblingeoise-2025" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">16 Nov.</span></td><td>Ronde des Belvédères – Freyming</td><td>Freyming-Merlebach</td><td>10 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://fmacfreymingmerlebach.com" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">07 Déc.</span></td><td>Foulées de Noël – Stiring-Wendel</td><td>Stiring-Wendel</td><td>8,4 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://performance67.com" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+          <tr><td><span class="cal-date">28 Déc.</span></td><td>Silvesterlauf – Sarrebruck</td><td>Sarrebruck (DE)</td><td>10 km</td><td><span class="cal-tag cal-route">Route</span><span class="cal-tag cal-challenge">Challenge</span></td><td><a href="https://www.silvesterlauf-sb.de" target="_blank"><i class="fas fa-link"></i></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cal-note"><i class="fas fa-info-circle"></i> Calendrier indicatif basé sur la saison 2025. Les dates 2026 seront confirmées progressivement. ⭐ = épreuves organisées par le CAN. Source : <a href="http://www.courirenmoselle.fr" target="_blank">Courir en Moselle</a></p>
+  </div>
+</section>
+
 <section class="section results-section" id="resultats">
   <div class="container">
     <div class="section-header">
@@ -512,25 +545,37 @@
     <div class="club-grid">
       <div class="club-text">
         <h3>Bienvenue au CAN Sarreguemines</h3>
-        <p class="lead">Fondé en janvier 1980, le CAN (Courez Avec Nous) Sarreguemines est un club d'athlétisme convivial de course à pied.</p>
-        <p>Débutants comme confirmés, coureurs de routes comme de trails, tous sont les bienvenus. Nous organisons des entraînements collectifs plusieurs fois par semaine et participons collectivement à de nombreuses courses régionales.</p>
+        <p class="lead">Fondé en janvier 1980, le CAN (Courez Avec Nous) Sarreguemines est un club d'athlétisme convivial de course à pied en Moselle.</p>
+        <p>Débutants comme confirmés, coureurs de routes comme de trails — tous sont bienvenus ! Entraînements plurihebdomadaires et participations collectives à de nombreuses courses régionales.</p>
 
-        <h4>Adhésion</h4>
+        <h4><i class="fas fa-running"></i> Entraînements</h4>
         <ul class="club-list">
-          <li><i class="fas fa-euro-sign"></i> <strong>20 € / personne</strong> ou <strong>30 € / couple</strong></li>
-          <li><i class="fas fa-calendar"></i> Valable de janvier à décembre</li>
-          <li><i class="fas fa-user"></i> Ouvert à partir de 18 ans</li>
-          <li><i class="fas fa-file-download"></i> <a href="http://www.courezavecnous.com/LA_VIE_AU_CLUB.html" target="_blank">Bulletin d'adhésion à télécharger</a></li>
+          <li><i class="fas fa-sun"></i> <strong>Avr.–Sep. :</strong> Mar &amp; Jeu 18h30 — Forêt du Buchholz, entrée rue Roth (parking Super U)</li>
+          <li><i class="fas fa-snowflake"></i> <strong>Oct.–Mar. :</strong> Mar &amp; Jeu 18h30 — Parking Lycée Technique Sarreguemines</li>
+          <li><i class="fas fa-calendar-day"></i> <strong>Dim. &amp; jours fériés :</strong> 9h00 — Forêt du Buchholz</li>
+          <li><i class="fas fa-route"></i> Parcours de 9,5 à 13 km selon le groupe · After-run au club-house (Stade P. de Coubertin)</li>
         </ul>
 
-        <h4>Le Comité 2024</h4>
+        <h4><i class="fas fa-euro-sign"></i> Adhésion 2026</h4>
         <ul class="club-list">
-          <li><i class="fas fa-crown"></i> <strong>Présidente :</strong> Elodie Darnault</li>
-          <li><i class="fas fa-coins"></i> <strong>Trésorier :</strong> Mathieu Ridgen</li>
-          <li><i class="fas fa-pen"></i> <strong>Secrétaire :</strong> Alexandre Hoffmann</li>
-          <li><i class="fas fa-users"></i> <strong>Assesseurs :</strong> Armande Drui, Francine Gaud Haman, Sabine Kraemer, Stéphane Becker...</li>
+          <li><i class="fas fa-user"></i> <strong>20 € / personne</strong> — valable janvier–décembre</li>
+          <li><i class="fas fa-users"></i> <strong>30 € / couple</strong> — deux adhérents</li>
+          <li><i class="fas fa-birthday-cake"></i> Ouvert à partir de 18 ans</li>
+          <li><i class="fas fa-file-download"></i> <a href="http://www.courezavecnous.com/LA_VIE_AU_CLUB.html" target="_blank">Statuts &amp; bulletin d'adhésion</a></li>
         </ul>
-        <a href="http://www.courezavecnous.com/COMITE.html" target="_blank" class="btn btn-outline">Voir le comité complet</a>
+
+        <h4><i class="fas fa-users-cog"></i> Le Comité 2024</h4>
+        <div class="comite-grid-inline">
+          <div class="comite-item-inline"><i class="fas fa-crown"></i><div><strong>Présidente</strong><span>Elodie Darnault</span></div></div>
+          <div class="comite-item-inline"><i class="fas fa-coins"></i><div><strong>Trésorier</strong><span>Mathieu Ridgen</span></div></div>
+          <div class="comite-item-inline"><i class="fas fa-pen-nib"></i><div><strong>Secrétaire</strong><span>Alexandre Hoffmann</span></div></div>
+          <div class="comite-item-inline"><i class="fas fa-star"></i><div><strong>Assesseurs</strong><span>Armande Drui · Francine Gaud Haman · Sabine Kraemer · Stéphane Becker · Bruno Grasso · Hocine Boutoubat · Yannick Meyer</span></div></div>
+          <div class="comite-item-inline honor"><i class="fas fa-medal"></i><div><strong>Présidents d'honneur</strong><span>Mme Hubé Mathilde · M. Amerein Gérard · M. Hamann Marius · M. Weislinger Pascal · Mme Jung Isabelle</span></div></div>
+        </div>
+        <div class="club-btns-row">
+          <button class="btn btn-primary" onclick="openModal()"><i class="fas fa-running"></i> Adhérer maintenant</button>
+          <a href="http://www.courezavecnous.com/COMITE.html" target="_blank" class="btn btn-outline">Comité complet</a>
+        </div>
       </div>
       <div class="club-cards">
         <div class="info-card">
@@ -612,72 +657,80 @@
     <h2>Prêt à Courir Avec Nous ?</h2>
     <p>Rejoignez le CAN Sarreguemines — club convivial, tous niveaux, depuis 1980</p>
     <div class="cta-btns">
-      <a href="https://forms.registration4all.com/EventRegistration/Register_Sport_Event.aspx?EventID=220456" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-running"></i> Adhérer Maintenant</a>
+      <button class="btn btn-primary btn-lg" onclick="openModal()"><i class="fas fa-running"></i> Adhérer Maintenant</button>
       <a href="mailto:can.sarreguemines@gmail.com" class="btn btn-outline-white btn-lg"><i class="fas fa-envelope"></i> Nous Contacter</a>
     </div>
   </div>
 </section>
 
-
 <!-- ====================================================
-     CONTACT FORM
+     FOOTER / CONTACT
 ===================================================== -->
-<section class="contact-section" id="contact-formulaire">
+<!-- ====================================================
+     CONTACT & LOCALISATION
+===================================================== -->
+<section class="section contact-section" id="contact-map">
   <div class="container">
-    <div class="section-title">
-      <span class="section-badge">Nous écrire</span>
-      <h2>Contactez le CAN Sarreguemines</h2>
-      <p>Une question sur le club, les entraînements ou une course ? Écrivez-nous directement.</p>
+    <div class="section-header">
+      <div><span class="section-tag">Nous trouver</span><h2 class="section-title">Contact &amp; Localisation</h2></div>
     </div>
-
     <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Informations utiles</h3>
-        <ul class="contact-info-list">
-          <li><i class="fas fa-envelope"></i> <a href="mailto:can.sarreguemines@gmail.com">can.sarreguemines@gmail.com</a></li>
-          <li><i class="fas fa-map-marker-alt"></i> 10, rue Jean Baptiste Barth, 57200 Sarreguemines</li>
-          <li><i class="fas fa-clock"></i> Entraînements : mardi & jeudi à 18h30</li>
-        </ul>
+      <div class="contact-info-col">
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <div><h4>Siège du Club</h4><p>10, rue Jean Baptiste Barth<br>57200 SARREGUEMINES</p></div>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <div><h4>Email</h4><a href="mailto:can.sarreguemines@gmail.com">can.sarreguemines@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-clock"></i>
+          <div><h4>Entraînements</h4><p><strong>Mardi &amp; Jeudi 18h30</strong><br>Avr–Sep : Buchholz (rue Roth)<br>Oct–Mar : Lycée Technique</p></div>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-sun"></i>
+          <div><h4>Dimanches &amp; Jours fériés</h4><p>9h00 — Forêt du Buchholz</p></div>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-home"></i>
+          <div><h4>Club House</h4><p>Stade Pierre de Coubertin<br>57200 SARREGUEMINES</p></div>
+        </div>
+        <div class="contact-social-row">
+          <a href="https://www.facebook.com/people/CAN-Sarreguemines/100083086042865" target="_blank" class="csoc csoc-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="https://www.instagram.com/cansarreguemines/" target="_blank" class="csoc csoc-ig"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://www.flickr.com/photos/127451228@N05/collections/" target="_blank" class="csoc csoc-fl"><i class="fab fa-flickr"></i> Flickr</a>
+          <a href="https://www.youtube.com/channel/UCToA7cgLOyE8D9TNn8tlWJQ" target="_blank" class="csoc csoc-yt"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
       </div>
-
-      <div class="contact-form-card">
-        <form class="contact-form" action="contact.php" method="post">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Nom</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Sujet</label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
-
-          <div class="contact-status" id="contact-status" aria-live="polite"></div>
-
-          <button type="submit" class="btn btn-primary btn-lg">
-            <i class="fas fa-paper-plane"></i> Envoyer le message
-          </button>
-        </form>
+      <div class="contact-maps-col">
+        <div class="map-tabs">
+          <button class="map-tab map-tab--active" onclick="switchMap(this,'gmap')"><i class="fas fa-map"></i> Plan</button>
+          <button class="map-tab" onclick="switchMap(this,'streetview')"><i class="fas fa-street-view"></i> Street View</button>
+        </div>
+        <div class="map-frame" id="gmap">
+          <iframe
+            title="CAN Sarreguemines – Siège du club"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2597.9!2d7.0678!3d49.1134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794c23c3bb75ef3%3A0x0!2s10+Rue+Jean-Baptiste+Barth%2C+57200+Sarreguemines%2C+France!5e0!3m2!1sfr!2sfr!4v1700000000000"
+            width="100%" height="400" style="border:0;display:block;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map-frame" id="streetview" style="display:none;">
+          <iframe
+            title="Street View – Sarreguemines"
+            src="https://www.google.com/maps/embed?pb=!4v1700000000001!6m8!1m7!1sAF1QipO_XzLp8hBEYzK7A9lsGvNxCkQ!2m2!1d49.1134!2d7.0678!3f270!4f0!5f0.7820865974627469"
+            width="100%" height="400" style="border:0;display:block;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=10+Rue+Jean-Baptiste+Barth+57200+Sarreguemines+France"
+           target="_blank" class="btn btn-primary" style="margin-top:14px;justify-content:center;width:100%;">
+          <i class="fas fa-directions"></i> Obtenir l'itinéraire
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ====================================================
-     FOOTER / CONTACT
-===================================================== -->
 <footer class="footer" id="contact">
   <div class="container">
     <div class="footer-grid">
@@ -734,31 +787,215 @@
   </div>
 </footer>
 
-<script>
+<!-- ====================================================
+     MODAL ADHÉSION
+===================================================== -->
+<div class="modal-overlay" id="modalAdhesion" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">&#x2715;</button>
+    <div class="modal-steps">
+      <div class="modal-step modal-step--active" id="step1-ind"><span>1</span> Formule</div>
+      <div class="modal-step" id="step2-ind"><span>2</span> Coordonnées</div>
+      <div class="modal-step" id="step3-ind"><span>3</span> Paiement</div>
+    </div>
 
-// Contact form feedback via query string
-(function () {
-  const status = document.getElementById('contact-status');
-  if (!status) return;
-  const params = new URLSearchParams(window.location.search);
-  const contact = params.get('contact');
+    <!-- STEP 1 -->
+    <div class="modal-content" id="step1">
+      <div class="modal-header">
+        <img src="images/Logo CAN.png" alt="CAN" class="modal-logo">
+        <h2 id="modalTitle">Adhérer au CAN Sarreguemines</h2>
+        <p>Choisissez votre formule d'adhésion 2026</p>
+      </div>
+      <div class="plan-grid">
+        <label class="plan-card" for="planPerso">
+          <input type="radio" name="plan" id="planPerso" value="20" checked>
+          <div class="plan-inner">
+            <i class="fas fa-user"></i>
+            <h3>Individuel</h3>
+            <div class="plan-price">20 <span>€</span></div>
+            <p>Valable jan.–déc. 2026</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Accès à tous les entraînements</li>
+              <li><i class="fas fa-check"></i> Participation Challenge CAN</li>
+              <li><i class="fas fa-check"></i> Newsletter &amp; Le Caniste</li>
+              <li><i class="fas fa-check"></i> Tarifs préférentiels courses</li>
+            </ul>
+            <div class="plan-badge">Le plus choisi</div>
+          </div>
+        </label>
+        <label class="plan-card" for="planCouple">
+          <input type="radio" name="plan" id="planCouple" value="30">
+          <div class="plan-inner">
+            <i class="fas fa-users"></i>
+            <h3>Couple</h3>
+            <div class="plan-price">30 <span>€</span></div>
+            <p>Valable jan.–déc. 2026</p>
+            <ul>
+              <li><i class="fas fa-check"></i> 2 adhérents inscrits</li>
+              <li><i class="fas fa-check"></i> Accès à tous les entraînements</li>
+              <li><i class="fas fa-check"></i> Challenge CAN pour les deux</li>
+              <li><i class="fas fa-check"></i> Newsletter &amp; Le Caniste</li>
+            </ul>
+          </div>
+        </label>
+      </div>
+      <div class="modal-note">
+        <i class="fas fa-info-circle"></i>
+        <span>À partir de 18 ans. Aucun certificat médical requis pour les sorties non compétitives.</span>
+      </div>
+      <button class="btn btn-primary btn-full" onclick="modalGoStep(2)">Continuer <i class="fas fa-arrow-right"></i></button>
+    </div>
 
-  if (contact === 'ok') {
-    status.className = 'contact-status success';
-    status.textContent = 'Votre message a bien été envoyé. Merci !';
-  } else if (contact === 'error') {
-    status.className = 'contact-status error';
-    status.textContent = "Une erreur est survenue lors de l'envoi. Vous pouvez aussi nous écrire directement par email.";
-  }
+    <!-- STEP 2 -->
+    <div class="modal-content" id="step2" style="display:none;">
+      <div class="modal-header">
+        <h2>Vos coordonnées</h2>
+        <p id="step2Msg">Formulaire d'adhésion CAN Sarreguemines 2026</p>
+      </div>
+      <form id="adhesionForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label>Prénom <span class="req">*</span></label><input type="text" id="fPrenom" placeholder="Prénom" required></div>
+          <div class="form-group"><label>Nom <span class="req">*</span></label><input type="text" id="fNom" placeholder="Nom" required></div>
+        </div>
+        <div id="conjoint-block" style="display:none;">
+          <p class="conjoint-label"><i class="fas fa-user-plus"></i> Conjoint(e)</p>
+          <div class="form-row">
+            <div class="form-group"><label>Prénom 2</label><input type="text" id="fPrenom2" placeholder="Prénom"></div>
+            <div class="form-group"><label>Nom 2</label><input type="text" id="fNom2" placeholder="Nom"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email <span class="req">*</span></label><input type="email" id="fEmail" placeholder="votre@email.com" required></div>
+          <div class="form-group"><label>Téléphone</label><input type="tel" id="fTel" placeholder="06 xx xx xx xx"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Date de naissance <span class="req">*</span></label><input type="date" id="fDob" required></div>
+          <div class="form-group"><label>Ville <span class="req">*</span></label><input type="text" id="fVille" placeholder="Sarreguemines" required></div>
+        </div>
+        <div class="form-group">
+          <label>Profil coureur</label>
+          <select id="fNiveau">
+            <option value="">Sélectionner...</option>
+            <option>Débutant – je débute la course à pied</option>
+            <option>Loisir – je cours pour le plaisir</option>
+            <option>Confirmé – je participe à des courses</option>
+            <option>Compétition – objectif chrono</option>
+            <option>Trail – courses nature</option>
+          </select>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="fRgpd" required>
+          <label for="fRgpd">J'accepte que mes données soient utilisées pour la gestion de mon adhésion au CAN Sarreguemines.</label>
+        </div>
+      </form>
+      <div class="modal-btns">
+        <button class="btn btn-outline" onclick="modalGoStep(1)"><i class="fas fa-arrow-left"></i> Retour</button>
+        <button class="btn btn-primary" onclick="modalGoStep(3)">Continuer <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
 
-  if (contact) {
-    const url = new URL(window.location);
-    url.searchParams.delete('contact');
-    window.history.replaceState({}, document.title, url.pathname + url.hash);
-  }
-})();
+    <!-- STEP 3 -->
+    <div class="modal-content" id="step3" style="display:none;">
+      <div class="modal-header">
+        <h2>Paiement sécurisé</h2>
+        <p>Choisissez votre mode de règlement</p>
+      </div>
+      <div class="order-summary">
+        <div class="order-row"><span id="summaryPlan">Adhésion Individuelle</span><span id="summaryPrice">20,00 €</span></div>
+        <div class="order-row order-total"><span>Total</span><span id="summaryTotal">20,00 €</span></div>
+      </div>
+      <div class="pay-methods">
+        <button class="pay-method-btn pay-method-btn--active" onclick="selectPayMethod(this,'card')" id="pmCard"><i class="fas fa-credit-card"></i><span>Carte</span></button>
+        <button class="pay-method-btn" onclick="selectPayMethod(this,'paypal')" id="pmPaypal"><i class="fab fa-paypal"></i><span>PayPal</span></button>
+        <button class="pay-method-btn" onclick="selectPayMethod(this,'helloasso')" id="pmHelloasso"><i class="fas fa-heart"></i><span>HelloAsso</span></button>
+        <button class="pay-method-btn" onclick="selectPayMethod(this,'virement')" id="pmVirement"><i class="fas fa-university"></i><span>Virement</span></button>
+        <button class="pay-method-btn" onclick="selectPayMethod(this,'cheque')" id="pmCheque"><i class="fas fa-money-check"></i><span>Chèque</span></button>
+      </div>
 
-</script>
+      <!-- Card form -->
+      <div id="pmCard-form" class="pay-form">
+        <div class="card-preview">
+          <div class="card-chip"></div>
+          <div class="card-number" id="previewNum">•••• •••• •••• ••••</div>
+          <div class="card-footer-row"><span id="previewName">NOM PRÉNOM</span><span id="previewExp">MM/AA</span></div>
+        </div>
+        <div class="form-group">
+          <label>Numéro de carte</label>
+          <div class="card-input-wrap">
+            <input type="text" id="cardNum" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)" onkeyup="updateCardPreview()">
+            <div class="card-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Titulaire</label><input type="text" id="cardName" placeholder="Nom Prénom" onkeyup="updateCardPreview()"></div>
+          <div class="form-group"><label>Expiration</label><input type="text" id="cardExp" placeholder="MM/AA" maxlength="5" oninput="formatExp(this)" onkeyup="updateCardPreview()"></div>
+          <div class="form-group"><label>CVC</label><input type="text" id="cardCvc" placeholder="•••" maxlength="4"></div>
+        </div>
+        <p class="secure-badge"><i class="fas fa-lock"></i> Paiement 100% sécurisé SSL/TLS</p>
+      </div>
+      <!-- PayPal -->
+      <div id="pmPaypal-form" class="pay-form" style="display:none;">
+        <div class="alt-pay-info">
+          <i class="fab fa-paypal" style="font-size:3.5rem;color:#1b77b4;"></i>
+          <p>Vous serez redirigé vers PayPal pour payer <strong id="paypalAmt">20,00 €</strong></p>
+          <a href="https://www.paypal.com" target="_blank" class="btn btn-primary" style="background:#1b77b4;"><i class="fab fa-paypal"></i> Payer avec PayPal</a>
+        </div>
+      </div>
+      <!-- HelloAsso -->
+      <div id="pmHelloasso-form" class="pay-form" style="display:none;">
+        <div class="alt-pay-info">
+          <i class="fas fa-heart" style="font-size:3.5rem;color:#e94e3d;"></i>
+          <p><strong>HelloAsso</strong> — 0% de frais pour le club.</p>
+          <a href="https://www.helloasso.com" target="_blank" class="btn btn-primary" style="background:#e94e3d;"><i class="fas fa-external-link-alt"></i> Payer sur HelloAsso</a>
+        </div>
+      </div>
+      <!-- Virement -->
+      <div id="pmVirement-form" class="pay-form" style="display:none;">
+        <div class="bank-info-box">
+          <h4><i class="fas fa-university"></i> Virement bancaire</h4>
+          <div class="bank-row"><span>Bénéficiaire</span><strong>CAN Sarreguemines</strong></div>
+          <div class="bank-row"><span>IBAN</span><strong>FR76 XXXX XXXX XXXX XXXX XXXX XXX</strong></div>
+          <div class="bank-row"><span>BIC</span><strong>XXXXXXXX</strong></div>
+          <div class="bank-row"><span>Motif</span><strong>ADHESION 2026 – [Votre Nom]</strong></div>
+          <p style="margin-top:12px;font-size:.85rem;color:#64748b;">Envoyez aussi un email à <a href="mailto:can.sarreguemines@gmail.com" style="color:#1d4ed8;">can.sarreguemines@gmail.com</a></p>
+        </div>
+      </div>
+      <!-- Chèque -->
+      <div id="pmCheque-form" class="pay-form" style="display:none;">
+        <div class="bank-info-box">
+          <h4><i class="fas fa-money-check"></i> Paiement par chèque</h4>
+          <p>Chèque à l'ordre de <strong>CAN Sarreguemines</strong> à envoyer à :</p>
+          <div class="bank-row"><span>Adresse</span><strong>10, rue Jean Baptiste Barth<br>57200 SARREGUEMINES</strong></div>
+          <p style="margin-top:12px;font-size:.85rem;color:#64748b;">Joignez le <a href="http://www.courezavecnous.com/LA_VIE_AU_CLUB.html" target="_blank" style="color:#1d4ed8;">bulletin d'adhésion</a> rempli.</p>
+        </div>
+      </div>
+
+      <div class="modal-btns" id="payBtns">
+        <button class="btn btn-outline" onclick="modalGoStep(2)"><i class="fas fa-arrow-left"></i> Retour</button>
+        <button class="btn btn-primary" onclick="submitPayment()" id="payBtn"><i class="fas fa-lock"></i> Confirmer &amp; Payer</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 — Confirmation -->
+    <div class="modal-content" id="step4" style="display:none;">
+      <div class="modal-success">
+        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+        <h2>Merci pour votre adhésion ! 🎉</h2>
+        <p>Votre demande a été enregistrée. Un email de confirmation vous sera envoyé.</p>
+        <div class="success-next">
+          <p><strong>Prochaines étapes :</strong></p>
+          <ul>
+            <li><i class="fas fa-envelope"></i> Email de confirmation dans quelques minutes</li>
+            <li><i class="fas fa-running"></i> 1er entraînement : mardi ou jeudi à 18h30</li>
+            <li><i class="fas fa-map-marker-alt"></i> RDV Buchholz (avr.–sep.) ou Lycée Technique (oct.–mars)</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary btn-full" onclick="closeModal()">Fermer <i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
