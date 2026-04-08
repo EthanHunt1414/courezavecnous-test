@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAN Sarreguemines – Courez Avec Nous</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="CAN Sarreguemines – Club de course à pied à Sarreguemines : entraînements, événements, résultats, trail, route et vie du club.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#d10000">
+  <link rel="canonical" href="https://www.courezavecnous.com/">
+  <link rel="icon" type="image/png" href="images/favicon-can.png">
+  <meta property="og:title" content="CAN Sarreguemines – Courez Avec Nous">
+  <meta property="og:description" content="Le club de course à pied de Sarreguemines : événements, résultats, trail, route et vie du club.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.courezavecnous.com/">
+  <meta property="og:image" content="https://www.courezavecnous.com/images/Logo%20CAN.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -608,6 +618,63 @@
   </div>
 </section>
 
+
+<!-- ====================================================
+     CONTACT FORM
+===================================================== -->
+<section class="contact-section" id="contact-formulaire">
+  <div class="container">
+    <div class="section-title">
+      <span class="section-badge">Nous écrire</span>
+      <h2>Contactez le CAN Sarreguemines</h2>
+      <p>Une question sur le club, les entraînements ou une course ? Écrivez-nous directement.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Informations utiles</h3>
+        <ul class="contact-info-list">
+          <li><i class="fas fa-envelope"></i> <a href="mailto:can.sarreguemines@gmail.com">can.sarreguemines@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> 10, rue Jean Baptiste Barth, 57200 Sarreguemines</li>
+          <li><i class="fas fa-clock"></i> Entraînements : mardi & jeudi à 18h30</li>
+        </ul>
+      </div>
+
+      <div class="contact-form-card">
+        <form class="contact-form" action="contact.php" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="contact-status" id="contact-status" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i> Envoyer le message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ====================================================
      FOOTER / CONTACT
 ===================================================== -->
@@ -667,6 +734,31 @@
   </div>
 </footer>
 
+<script>
+
+// Contact form feedback via query string
+(function () {
+  const status = document.getElementById('contact-status');
+  if (!status) return;
+  const params = new URLSearchParams(window.location.search);
+  const contact = params.get('contact');
+
+  if (contact === 'ok') {
+    status.className = 'contact-status success';
+    status.textContent = 'Votre message a bien été envoyé. Merci !';
+  } else if (contact === 'error') {
+    status.className = 'contact-status error';
+    status.textContent = "Une erreur est survenue lors de l'envoi. Vous pouvez aussi nous écrire directement par email.";
+  }
+
+  if (contact) {
+    const url = new URL(window.location);
+    url.searchParams.delete('contact');
+    window.history.replaceState({}, document.title, url.pathname + url.hash);
+  }
+})();
+
+</script>
 <script src="script.js"></script>
 </body>
 </html>

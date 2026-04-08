@@ -1,0 +1,29 @@
+CAN Sarreguemines – V3 Production FirstHeberg
+
+UPLOAD RECOMMANDÉ (version propre) :
+- Utiliser le dossier : can-website-firstheberg-v3-PRODUCTION-CLEAN
+
+Contenu à envoyer dans le dossier web du serveur (www/ ou htdocs/ ou public_html/) :
+- index.html
+- styles.css
+- script.js
+- .htaccess
+- contact.php
+- 404.html
+- robots.txt
+- sitemap.xml
+- dossier images/
+
+IMPORTANT :
+- Uploader le CONTENU du dossier, pas le dossier lui-même.
+
+TESTS APRÈS MISE EN LIGNE :
+1. https://www.courezavecnous.com
+2. Menu / ancres
+3. Affichage mobile
+4. Formulaire de contact
+5. Ctrl+F5 si cache
+
+SI LE FORMULAIRE NE FONCTIONNE PAS :
+- Vérifier si la fonction PHP mail() est autorisée chez FirstHeberg
+- Sinon, remplacer par SMTP ou Formspree
